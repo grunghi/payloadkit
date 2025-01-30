@@ -1,12 +1,12 @@
-import { getPayload } from 'payload';
-import { config } from 'payload-app';
+import { getPayload } from 'payload'
+import { config } from 'payload-app'
 
-import type { Handle } from '@sveltejs/kit';
+import type { Handle } from '@sveltejs/kit'
 
 export const handle: Handle = async ({ event, resolve }) => {
-	event.locals.payload = await getPayload({ config });
+  event.locals.payload = await getPayload({ config })
 
-	const response = await resolve(event);
+  const response = await resolve(event)
 
-	return response;
-};
+  return response
+}
